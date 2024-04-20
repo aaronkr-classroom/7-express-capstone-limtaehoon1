@@ -32,48 +32,20 @@
   <body>
     <!-- @TODO: partials/header.ejs -->
     <!-- @TODO: 로고가 있는 헤더와 4개 이상의 항목이 포함된 탐색 메뉴를 생성하십시오 -->
-    <header class="header">
-      <div class="container">
-        <div class="container-left">
-          <figure class="logo">
-            <a href="/">
-              <h1 class="site-title">🍔 Aaron's Node Site</h1>
-            </a>
-          </figure>
-          
-          <!-- @TODO: partials/navigation.ejs -->
-          <nav class="menu">
-            <a class="menu-item" href="/courses">Courses</a>
-            <a class="menu-item" href="/contact">Contact</a>
-          </nav>
-          <!-- @TODO: 반응형 메뉴 버튼을 생성하십시오 -->
-          <!-- 이것은 나중에 JavaScript에서 사용될 것이다 -->
-          <div id="menu-button">Menu</div>
-
-        </div>
-      </div>
-    </header>
-
+    
 <!-- @TODO: index.ejs -->
-<main class="text-center cover-container">
-  <div id="index" class="cover-content h-100 w-100 text-white">
-    <div class="cover-box-2">
-      <h1 class="page-title">Welcome to Aaron's Node Site!</h1>
-      <p class="page-description lead">
-        This is a simple site built with Node.js and Express.
-      </p>
-    </div>
-  </div>
-</main>
+
 
     <!-- @TODO: partials/footer.ejs -->
-    <footer class="text-center fixed-bottom bg-dark text-bg-dark pt-3">
-      <p>&copy; 2023 Aaron Snowberger</p>
-    </footer>
-
+    <%- include('parts/hearder'); %>
+    <%- body; %>
+    <%- include('parts/footer'); %>
+    <%- include('partials/footer'); %>
+    <%- include('partials/header'); %>
+    <%- include('partials/nav'); %>
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
-
+ 
   <!--
     [노트] 레이아웃 파일은 방문하는 모든 페이지상에서 렌더링된다.
     한 번 < %- body % >의 전후로 HTML 콘텐츠를 추가해보라. 
