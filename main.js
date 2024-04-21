@@ -3,6 +3,13 @@
 "use strict";
 
 // 앱 설정
+const port = 3000,
+http = require("http"),
+httpStatus = require("http-status-codes"),
+homeController = require("./controllers/homeController"),
+errorController = require("./controllers/errorController");
+
+
 const express = require("express"),
     app = express();
 app.set("port", process.env.PORT || 3000);
