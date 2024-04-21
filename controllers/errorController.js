@@ -6,7 +6,7 @@ const httpStatus = require("http-status-codes");
 /**
  * Listing 11.2 (p. 168)
  */
-exports.pageNoutFoundError = (req,res) => {
+exports.pageNotFoundError = (req,res) => {
     let errorCode = httpStatus.NOT_FOUND;
     res.status(errorCode);
     //res.send("404 | Not Found")
